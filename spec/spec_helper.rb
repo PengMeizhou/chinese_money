@@ -1,6 +1,4 @@
 require 'simplecov'
-require "bundler/setup"
-require "chinese_money"
 
 SimpleCov.start 'rails' do
   add_filter '/bin/'
@@ -15,8 +13,10 @@ SimpleCov.start 'rails' do
   add_group 'Helpers', 'app/helpers'
   add_group 'Mailers', 'app/mailers'
 end
-
 SimpleCov.coverage_dir 'public/coverage'
+
+require "bundler/setup"
+require "chinese_money"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

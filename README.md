@@ -21,8 +21,10 @@ Or install it yourself as:
     $ gem install chinese_money
 
 ## Usage
-
-TODO: Write usage instructions here
+  
+ 	 ChineseMoney.show_money(0)  			-> 零圆整
+   ChineseMoney.show_money(250.01)  -> 贰佰伍拾圆零壹分
+   ChineseMoney.show_money(2567890) -> 贰佰伍拾陆万柒仟捌佰玖拾圆整
 
 ## Development
 

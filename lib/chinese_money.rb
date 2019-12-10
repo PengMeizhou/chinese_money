@@ -6,7 +6,7 @@ module ChineseMoney
   # main method
   def self.show_money(total_money)
     cn_upper_number =%w[零 壹 贰 叁 肆 伍 陆 柒 捌 玖]
-    cn_upper_monetray_unit = %w[ 分 角  元 拾 佰 仟 万 拾 佰 仟 亿 拾 佰 仟 兆 拾 佰 仟]
+    cn_upper_monetray_unit = %w[分 角 圆 拾 佰 仟 万 拾 佰 仟 亿 拾 佰 仟 兆 拾 佰 仟]
     cn_full = '整'
     cn_negative = '负'
     money_precision = 2
@@ -17,6 +17,9 @@ module ChineseMoney
     num_unit = 0
     change_result = []
     my_total_price = total_money
+
+    #  Too long too big/cannot support
+    return '只支持总长度不超过17位的数字。' if my_total_price.to_i > 100000000000000
 
     #  For zero
     return cn_zeor_full if my_total_price.zero?
