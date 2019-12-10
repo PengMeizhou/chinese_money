@@ -1,14 +1,14 @@
-require 'chinese_money_go/version'
+require 'chinese_money/version'
 
 # Display Chinese money
-module ChineseMoneyGo
+module ChineseMoney
   class Error < StandardError; end
   # main method
   def self.show_money(total_money)
     cn_upper_number =%w[零 壹 贰 叁 肆 伍 陆 柒 捌 玖]
     cn_upper_monetray_unit = %w[ 分 角  元 拾 佰 仟 万 拾 佰 仟 亿 拾 佰 仟 兆 拾 佰 仟]
     cn_full = '整'
-    cn_negative = '负' 
+    cn_negative = '负'
     money_precision = 2
     cn_zeor_full = "零圆#{cn_full}"
     is_zero = false
