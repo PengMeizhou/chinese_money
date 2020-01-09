@@ -4,7 +4,7 @@ RSpec.describe ChineseMoney do
   end
 
   it "is the first version" do
-    expect(ChineseMoney::VERSION).to eq('1.0.0')
+    expect(ChineseMoney::VERSION).to eq('1.0.1')
   end
 
   it "can show money 0" do
