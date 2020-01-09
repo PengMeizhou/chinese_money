@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-09T15:44:40+08:00">2020-01-09T15:44:40+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-09T15:56:28+08:00">2020-01-09T15:56:28+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.33%</span></span>
+    (<span class="covered_percent"><span class="green">93.18%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         11.48
+         11.65
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>45</b> relevant lines. 
-    <span class="green"><b>42</b> lines covered</span> and
+    <b>44</b> relevant lines. 
+    <span class="green"><b>41</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#37b3f6f7c8051ee93ad6962617fca9c32c7f62d6" class="src_link" title="lib/chinese_money.rb">lib/chinese_money.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>61</td>
-        <td>42</td>
-        <td>42</td>
+        <td>60</td>
+        <td>41</td>
+        <td>41</td>
         <td>0</td>
-        <td>12.3</td>
+        <td>12.5</td>
       </tr>
       
       <tr>
@@ -301,19 +301,19 @@
           <div class="file_list_container" id="Libraries">
   <h2>
     <span class="group_name">Libraries</span>
-    (<span class="covered_percent"><span class="green">93.33%</span></span>
+    (<span class="covered_percent"><span class="green">93.18%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         11.48
+         11.65
        </span>
     </span> hits/line)
   </h2>
   <a name="Libraries"></a>
   <div>
     <b>2</b> files in total.
-    <b>45</b> relevant lines. 
-    <span class="green"><b>42</b> lines covered</span> and
+    <b>44</b> relevant lines. 
+    <span class="green"><b>41</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -333,11 +333,11 @@
       <tr>
         <td class="strong"><a href="#37b3f6f7c8051ee93ad6962617fca9c32c7f62d6" class="src_link" title="lib/chinese_money.rb">lib/chinese_money.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>61</td>
-        <td>42</td>
-        <td>42</td>
+        <td>60</td>
+        <td>41</td>
+        <td>41</td>
         <td>0</td>
-        <td>12.3</td>
+        <td>12.5</td>
       </tr>
       
       <tr>
@@ -370,8 +370,8 @@
     <h3>lib/chinese_money.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>42</b> relevant lines. 
-      <span class="green"><b>42</b> lines covered</span> and
+      <b>41</b> relevant lines. 
+      <span class="green"><b>41</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -526,7 +526,7 @@
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">    # 读取小数点左边数字, 把数字按4位一组分割</code>
+          <code class="ruby">    # 读取小数点左边数字, 把数字按4位一组分割, 每组用 format_basic 方法读成数字，最后拼接起来</code>
         </li>
       
         <li class="covered" data-hits="12" data-linenumber="26">
@@ -628,118 +628,112 @@
         <li class="covered" data-hits="5" data-linenumber="42">
           <span class="hits">5</span>
           
-          <code class="ruby">      next if r == &#39;0&#39;</code>
+          <code class="ruby">      right_str += &quot;#{CN_UPPER_NUMBER[r.to_i]}#{CN_UNIT[i]}&quot; unless r == &#39;0&#39;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="43">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      right_str += &quot;#{CN_UPPER_NUMBER[r.to_i]}#{CN_UNIT[i]}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="45">
+        <li class="covered" data-hits="3" data-linenumber="44">
           <span class="hits">3</span>
           
           <code class="ruby">    right_str = &quot;#{CN_UPPER_NUMBER.first}#{right_str}&quot; unless right_str.start_with?(CN_UPPER_NUMBER.first)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="46">
+        <li class="covered" data-hits="3" data-linenumber="45">
           <span class="hits">3</span>
           
           <code class="ruby">    [cn_negative, left_str, right_str].join</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">  # 将任意1-4位数读出来</code>
+          <code class="ruby">  # 将任意1-4位数读出来: X千Y百Z十M</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.format_basic(arr)</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="51">
+        <li class="covered" data-hits="19" data-linenumber="50">
           <span class="hits">19</span>
           
           <code class="ruby">    res = &#39;&#39;</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="52">
+        <li class="covered" data-hits="19" data-linenumber="51">
           <span class="hits">19</span>
           
           <code class="ruby">    arr.each.with_index do |r, i|</code>
         </li>
       
-        <li class="covered" data-hits="56" data-linenumber="53">
+        <li class="covered" data-hits="56" data-linenumber="52">
           <span class="hits">56</span>
           
           <code class="ruby">      tmp = r == &#39;0&#39; ? CN_UPPER_NUMBER[r.to_i] : &quot;#{CN_UPPER_NUMBER[r.to_i]}#{CN_BASE[i]}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="56" data-linenumber="54">
+        <li class="covered" data-hits="56" data-linenumber="53">
           <span class="hits">56</span>
           
           <code class="ruby">      res = tmp + res</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="56">
+        <li class="covered" data-hits="19" data-linenumber="55">
           <span class="hits">19</span>
           
           <code class="ruby">    while res.end_with?(CN_UPPER_NUMBER[0])</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="57">
+        <li class="covered" data-hits="32" data-linenumber="56">
           <span class="hits">32</span>
           
           <code class="ruby">      res = res[0...-1]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="59">
+        <li class="covered" data-hits="19" data-linenumber="58">
           <span class="hits">19</span>
           
           <code class="ruby">    res.gsub(/#{CN_UPPER_NUMBER[0]}{1,}/, CN_UPPER_NUMBER[0])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>

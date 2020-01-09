@@ -39,8 +39,7 @@ module ChineseMoney
 
     # 读取小数点右边数字
     right.split('').each_with_index do |r, i|
-      next if r == '0'
-      right_str += "#{CN_UPPER_NUMBER[r.to_i]}#{CN_UNIT[i]}"
+      right_str += "#{CN_UPPER_NUMBER[r.to_i]}#{CN_UNIT[i]}" unless r == '0'
     end
     right_str = "#{CN_UPPER_NUMBER.first}#{right_str}" unless right_str.start_with?(CN_UPPER_NUMBER.first)
     [cn_negative, left_str, right_str].join
