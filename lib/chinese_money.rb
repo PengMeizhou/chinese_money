@@ -8,6 +8,7 @@ module ChineseMoney
     cn_upper_number =%w[零 壹 贰 叁 肆 伍 陆 柒 捌 玖]
     cn_upper_monetray_unit = %w[元 拾 佰 仟 万 拾 佰 仟 亿 拾 佰 仟 兆 拾 佰 仟]
     cn_unit = %w[角 分]
+    cn_full = '整'
     cn_negative = money < 0 ? '负' : ''
     money = money.abs
     is_full = money.to_i == money
@@ -17,7 +18,7 @@ module ChineseMoney
     money = money.to_s
     left, right = money.split('.')
     left_str, right_str = '', ''
-    if right
+    unless is_full
       rs = right.split('')
       rs.each_with_index do |r, i|
         right_str += "#{cn_upper_number[r.to_i]}#{cn_unit[i]}"
@@ -26,7 +27,7 @@ module ChineseMoney
     left.split('').reverse_each.with_index do |l, i|
       left_str = "#{cn_upper_number[l.to_i]}#{cn_upper_monetray_unit[i]}#{left_str}" 
     end
-    return [cn_negative, left_str, '整'].join if is_full
+    return [cn_negative, left_str, cn_full].join if is_full
       
     [cn_negative, left_str, right_str].join
   end
